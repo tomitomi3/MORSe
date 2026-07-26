@@ -1,0 +1,40 @@
+Spoken Digit Recognition Dataset (Lyon_decimation_128)
+======================================================
+
+The dataset is NOT included in this repository. The spoken digit recognition
+task (configs/sample_spoken_digit_recognition.json) fails to start without it.
+
+If the dataset is missing, the task raises FileNotFoundError with the expected
+path and this guide, so you can place the data and re-run.
+
+
+How to download
+---------------
+
+1. Open https://github.com/dsiufl/Reservoir-Computing
+2. Click "Code" and select "Download ZIP" (or clone the repository).
+3. Extract the ZIP file.
+4. Copy the whole "Lyon_decimation_128" folder into this directory:
+
+   src/tasks/sample_spoken_digit_recognition/datasets/Lyon_decimation_128/
+
+
+Expected layout after placement
+-------------------------------
+
+   src/tasks/sample_spoken_digit_recognition/datasets/
+   |-- How to download spoken digit recognition dataset.txt
+   `-- Lyon_decimation_128/
+       |-- s1_u1_d0.mat
+       |-- s1_u1_d1.mat
+       `-- ...
+
+File naming: s<speaker>_u<utterance>_d<digit>.mat
+Utterances 1-5 are used for training, the rest for testing.
+Each .mat file holds a "spec" cochleagram matrix.
+
+
+License
+-------
+
+Check the terms of use at the distribution source before using the dataset.

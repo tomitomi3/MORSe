@@ -1,0 +1,95 @@
+{
+  "ui_title": "MORSe",
+  "result_dir": "Result",
+  "task": {
+    "name": "sample_narma10_prediction_activation",
+    "params": {
+      "n_eval_seeds": 3,
+      "train_length": 900,
+      "test_length": 300,
+      "reservoir_size_lower": 20,
+      "reservoir_size_upper": 100,
+      "spectral_radius_lower": 0.2,
+      "spectral_radius_upper": 0.999,
+      "rc_connectivity_lower": 0.05,
+      "rc_connectivity_upper": 0.6,
+      "input_scaling_lower": 0.01,
+      "input_scaling_upper": 1.0,
+      "leaking_rate_lower": 0.1,
+      "leaking_rate_upper": 1.0,
+      "ridge_log10_lower": -4.0,
+      "ridge_log10_upper": 1.0
+    }
+  },
+  "seed": 1234,
+  "variable_analysis": {
+    "enabled": true,
+    "algorithm": "PFI",
+    "random_state": 123456,
+    "MDI": {
+      "max_samples": 5000,
+      "test_size": 0.2,
+      "n_iterations": 5,
+      "n_estimators": 100,
+      "max_depth": null,
+      "min_samples_leaf": 5
+    },
+    "PFI": {
+      "max_samples": 5000,
+      "test_size": 0.2,
+      "n_iterations": 5,
+      "n_estimators": 100,
+      "max_depth": null,
+      "min_samples_leaf": 5,
+      "n_repeats": 10
+    },
+    "PED_ANOVA": {
+      "max_samples": 20000,
+      "n_grid_points": 100,
+      "top_ratio": 0.1
+    }
+  },
+  "save_plots": false,
+  "realtime_visualize": true,
+  "optimizer": {
+    "algorithm": "MOEAD",
+    "MOEAD": {
+      "generations": 50,
+      "population_size": 50,
+      "crossover_type": "UNDX",
+      "scalar_function_type": "TCH",
+      "pbi_theta": 5.0,
+      "neighborhood_size": 15,
+      "delta": 1.0,
+      "nr": 1,
+      "eta_c": 20,
+      "eta_m": 20,
+      "use_polynomial_mutation": true,
+      "use_stochastic_rounding": true,
+      "gen_num_child": 3,
+      "crossover": {
+        "undx_alpha": 0.5,
+        "undx_beta": 0.3,
+        "undx_m_num_parents": 2,
+        "undx_m_sigma_xi": null,
+        "undx_m_sigma_eta": null,
+        "spx_epsilon": null,
+        "tblx_alpha": 0.5
+      },
+      "normalization": {
+        "mode": "static_first_generation",
+        "sdn_final_generation": null,
+        "eps": 1e-12,
+        "f1_static_upper_coeff": 1.0,
+        "f1_static_lower_coeff": 1.0,
+        "f2_static_upper_coeff": 1.0,
+        "f2_static_lower_coeff": 5.0
+      },
+      "boundary": {
+        "repair_mode": "clip",
+        "reflect_ratio": 0.2
+      },
+      "is_save_external_population": false
+    }
+  }
+}
