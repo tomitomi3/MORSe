@@ -1,0 +1,9 @@
+bokeh==3.8.2
+matplotlib==3.10.8
+networkx==3.4.2
+numpy==2.2.6
+orjson==3.11.7
+scikit-learn==1.7.2
+tqdm==4.67.2
+pytest==9.0.2
+reservoirpy==0.4.1
