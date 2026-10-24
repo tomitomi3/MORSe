@@ -1,8 +1,12 @@
+<div align="center">
+
 [ [English](README.md) | 日本語 ]
 
 ## MORSe
 
 **M**ulti-objective **O**ptimization for **R**eservoir computing parameter **Se**arch
+
+</div>
 
 MORSeは、リザバーコンピューティングのハイパーパラメータを多目的最適化で探索するPythonフレームワークである。多目的最適化アルゴリズムにMOEA/Dを用いて、予測・分類性能とリザバーノード数などのトレードオフをパレートフロントとして提示する。パラメータ重要度、ネットワーク指標、最適化結果の可視化を提供する。
 
@@ -97,7 +101,7 @@ get_variables()             # 決定変数を定義する
 
 - 連続変数 $x_i \in [0, 1]\ (i = 1, \dots, N_x)$
 - 整数変数 $z_i \in \lbrace 0, 1, \dots, K_z - 1 \rbrace\ (i = 1, \dots, N_z)$ を $\tilde{z}_i = z_i / (K_z - 1)$ で正規化
-- カテゴリ変数 $c_i\ (i = 1, \dots, N_c)$ をone-hotベクトル $\mathbf{c}_i = (c_{i,1}, \dots, c_{i,K_c})$ で表し、$\tilde{c}_i = 1 - c_{i,1}$ で正規化
+- カテゴリ変数 $c_i\ (i = 1, \dots, N_c)$ をone-hotベクトル $`\mathbf{c}_i = (c_{i,1}, \dots, c_{i,K_c})`$ で表し、$`\tilde{c}_i = 1 - c_{i,1}`$ で正規化
 
 #### ZDT1-MV / ZDT2-MV / ZDT3-MV （`MV`は Mixed Variable の略）
 

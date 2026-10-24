@@ -1,8 +1,12 @@
+<div align="center">
+
 [ English | [日本語](README_jp.md) ]
 
 ## MORSe
 
 **M**ulti-objective **O**ptimization for **R**eservoir computing parameter **Se**arch
+
+</div>
 
 MORSe is a Python framework for exploring reservoir computing hyperparameters through multi-objective optimization. It uses MOEA/D as its multi-objective optimization algorithm and presents trade-offs between objectives, such as prediction or classification performance and the number of reservoir nodes, as a Pareto front. It provides parameter importance analysis, network metrics, and visualization of optimization results.
 
@@ -97,7 +101,7 @@ ZDT1–ZDT3 [7], commonly used as multi-objective optimization benchmarks, are e
 
 - Continuous variables: $x_i \in [0, 1]\ (i = 1, \dots, N_x)$
 - Integer variables: $z_i \in \lbrace 0, 1, \dots, K_z - 1 \rbrace\ (i = 1, \dots, N_z)$, normalized as $\tilde{z}_i = z_i / (K_z - 1)$
-- Categorical variables: $c_i\ (i = 1, \dots, N_c)$, represented by a one-hot vector $\mathbf{c}_i = (c_{i,1}, \dots, c_{i,K_c})$ and normalized as $\tilde{c}_i = 1 - c_{i,1}$
+- Categorical variables: $c_i\ (i = 1, \dots, N_c)$, represented by a one-hot vector $`\mathbf{c}_i = (c_{i,1}, \dots, c_{i,K_c})`$ and normalized as $`\tilde{c}_i = 1 - c_{i,1}`$
 
 #### ZDT1-MV / ZDT2-MV / ZDT3-MV (`MV` stands for Mixed Variable)
 
